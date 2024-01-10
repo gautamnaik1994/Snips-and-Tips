@@ -2,9 +2,7 @@
 
 A telecom company had taken a **survey** of smartphone owners in a certain town 5 years back and found **73%** of the population own a **smartphone**, and have been since using this data to make their business decisions.
 
-Now a new marketing manager has joined, and he believes this value is not valid anymore. Thus he conducts a survey of **500 people** and finds that **420** of them responded with affirmation as to owning a smartphone.  Which **statistical test** would you use to **compare** these two survey data?
-
-
+Now a new marketing manager has joined, and he believes this value is not valid anymore. Thus he conducts a survey of **500 people** and finds that **420** of them responded with affirmation as to owning a smartphone. Which **statistical test** would you use to **compare** these two survey data?
 
 1. **Test of proportions, z-test:**
    * **Applicability:** This is the correct option. The z-test for proportions is suitable when comparing the proportions of two independent samples. In this case, you are comparing the proportion of smartphone owners in the town based on the data from 5 years ago (73%) and the recent survey (where 420 out of 500 respondents own a smartphone).
@@ -16,17 +14,41 @@ Now a new marketing manager has joined, and he believes this value is not valid 
    * **Applicability:** The t-test is used when comparing means of two independent samples, not proportions.
    * **Reasoning:** Since you are interested in comparing the proportion of smartphone owners, the t-test is not the appropriate choice. The t-test is used for continuous data (such as comparing the means of two groups) and is not suitable for proportions.
 
+### Kolmogorov–Smirnov Test (KS Test)
+
+This test checks if two sets of data have the same type of distribution.&#x20;
+
+### Kruskal Wallis Test
+
+This test does not assume that the data are normal, it does assume that the different groups have the same distribution, and groups with different standard deviations have different distributions
+
+### ANOVA
 
 
-| Scenario                                       | Statistical Test                           | Example                                                                                              |
-|-----------------------------------------------|--------------------------------------------|------------------------------------------------------------------------------------------------------|
-| Numerical vs. Numerical                        | Correlation                                | Examining the relationship between hours of study and exam scores.                                   |
-| Numerical vs. Categorical (Binary)             | Logistic Regression                        | Predicting the likelihood of a student passing an exam based on the number of hours of study.       |
-| Numerical vs. Categorical (More than 2 Categories) | ANOVA                                  | Comparing the average test scores of students who studied for different durations across multiple study groups. |
-| Numerical vs. Categorical (Repeated Measures)  | Repeated Measures ANOVA                   | Investigating changes in blood pressure levels across different time points with different treatment groups. |
-| Numerical vs. Categorical (Longitudinal Data)  | Mixed Effects Models                       | Analyzing repeated measurements of cholesterol levels over time for patients receiving different treatments. |
-| Numerical vs. Categorical (Survival Analysis)  | Kaplan-Meier, Cox Regression               | Assessing the time until relapse for patients with different types of cancer treatments.               |
-| Categorical vs. Categorical                   | Chi-square Test                           | Examining the association between gender and smoking status.                                          |
-| Categorical vs. Categorical (Association)      | Cramér's V                                | Measuring the strength of association between political affiliation and voting behavior.              |
-| Numerical vs. Categorical (Ordinal)            | Kruskal-Wallis Test                       | Comparing the median satisfaction scores for customers across different levels of service quality.    |
+
+### Levene
+
+
+
+### CHI Square
+
+
+
+
+
+| Scenario                                           | Statistical Test             | Example                                                                                                         |
+| -------------------------------------------------- | ---------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| Numerical vs. Numerical                            | Correlation                  | Examining the relationship between hours of study and exam scores.                                              |
+| Numerical vs. Categorical (Binary)                 | Logistic Regression          | Predicting the likelihood of a student passing an exam based on the number of hours of study.                   |
+| Numerical vs. Categorical (More than 2 Categories) | ANOVA                        | Comparing the average test scores of students who studied for different durations across multiple study groups. |
+| Numerical vs. Categorical (Repeated Measures)      | Repeated Measures ANOVA      | Investigating changes in blood pressure levels across different time points with different treatment groups.    |
+| Numerical vs. Categorical (Longitudinal Data)      | Mixed Effects Models         | Analyzing repeated measurements of cholesterol levels over time for patients receiving different treatments.    |
+| Numerical vs. Categorical (Survival Analysis)      | Kaplan-Meier, Cox Regression | Assessing the time until relapse for patients with different types of cancer treatments.                        |
+| Categorical vs. Categorical                        | Chi-square Test              | Examining the association between gender and smoking status.                                                    |
+| Categorical vs. Categorical (Association)          | Cramér's V                   | Measuring the strength of association between political affiliation and voting behavior.                        |
+| Numerical vs. Categorical (Ordinal)                | Kruskal-Wallis Test          | Comparing the median satisfaction scores for customers across different levels of service quality.              |
+
+###
+
+
 
