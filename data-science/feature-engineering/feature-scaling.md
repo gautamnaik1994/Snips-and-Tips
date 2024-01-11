@@ -1,6 +1,6 @@
 # Feature Scaling
 
-### Scaling Data
+## Techniques
 
 **Standard Scaler** standardizes data by subtracting the mean and dividing by the standard deviation. This is generally preferred for machine learning models as it:
 

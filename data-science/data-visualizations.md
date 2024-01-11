@@ -25,6 +25,13 @@ for i in range(2):
 plt.show();
 ```
 
+Subplots using single line
+
+```python
+data.plot(kind='density', subplots=True, layout=(3, 3), sharex=False)
+```
+
+
 ### Add a Pie chart inside the subplot
 
 ```python
@@ -38,3 +45,4 @@ axes[1,0].set_title("Gender Distribution");
 sns.countplot(x="Product_Category", data=df, 
     order=df["Product_Category"].value_counts().iloc[:10].index)
 ```
+

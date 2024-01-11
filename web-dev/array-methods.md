@@ -60,9 +60,11 @@ let sorted = obj.sort((a, b) => {
   return a.id - b.id
 })
 ```
+
 ## Slice and Splice
 
-### slice:
+### Slice
+
 Think of "slicing" as cutting a portion out of an array without modifying the original array.
 slice returns a shallow copy of a portion of an array, specified by a start and end index.
 
@@ -71,10 +73,12 @@ const originalArray = [1, 2, 3, 4, 5];
 const newArray = originalArray.slice(1, 4); // Returns [2, 3, 4]
 ```
 
-### splice:
+### Splice
 
 Think of "splicing" as modifying or changing the original array.
 splice is used to add or remove elements from an array at a specified index.
+
+
 ```javascript
 Copy code
 const originalArray = [1, 2, 3, 4, 5];
