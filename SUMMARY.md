@@ -7,6 +7,7 @@
 * [Polars Dataframe Library](data-science/polars-dataframe-library.md)
 * [Loading large data](data-science/loading-large-data.md)
 * [Handling Imbalanced Dataset](data-science/handling-imbalanced-dataset.md)
+* [Feature Engineering](data-science/feature-engineering.md)
 * [Pandas](data-science/pandas/README.md)
   * [Pandas Apply Function](data-science/pandas/pandas-apply-function.md)
 * [Data Visualizations](data-science/data-visualizations.md)
