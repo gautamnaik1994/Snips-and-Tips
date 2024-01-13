@@ -1,14 +1,14 @@
 # Handling Imbalanced Dataset
 
-### Undersampling
+## Undersampling
 
-### Oversampling
+## Oversampling
 
-* Artificial or Synthetic points
-* SMOTE Oversampling
+- Artificial or Synthetic points
+- SMOTE Oversampling
 
-### Algo
+## Algo
 
-* cost sensitive logistic regression
-* cost sensitive decision tree
-* cost sensitive svm
+- cost sensitive logistic regression
+- cost sensitive decision tree
+- cost sensitive svm

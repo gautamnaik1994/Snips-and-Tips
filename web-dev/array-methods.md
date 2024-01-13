@@ -3,62 +3,66 @@
 ## Array.reduce for object
 
 ```javascript
-var obj = [{
+var obj = [
+  {
     id: 5,
-    count: 7
+    count: 7,
   },
   {
     id: 3,
-    count: 45
+    count: 45,
   },
   {
     id: 8,
-    count: 35
+    count: 35,
   },
   {
     id: 1,
-    count: 15
-  }
-]
+    count: 15,
+  },
+];
 
-let res = obj.reduce((acc, next) => {
-  return {
-    id: acc.id + next.id,
-    count: acc.count + next.count
-  }
+let res = obj.reduce(
+  (acc, next) => {
+    return {
+      id: acc.id + next.id,
+      count: acc.count + next.count,
+    };
+  },
+  {
+    id: 0,
+    count: 0,
+  },
+);
 
-}, {
-  id: 0,
-  count: 0
-})
-
-console.log(res) // {count: 102,id: 17}
+console.log(res); // {count: 102,id: 17}
 ```
 
 ## Array.sort for object
 
 ```javascript
-var obj = [{
+var obj = [
+  {
     id: 5,
-    count: 7
+    count: 7,
   },
   {
     id: 3,
-    count: 45
+    count: 45,
   },
   {
     id: 8,
-    count: 35
+    count: 35,
   },
   {
     id: 1,
-    count: 15
-  }
-]
+    count: 15,
+  },
+];
 
 let sorted = obj.sort((a, b) => {
-  return a.id - b.id
-})
+  return a.id - b.id;
+});
 ```
 
 ## Slice and Splice
@@ -78,9 +82,7 @@ const newArray = originalArray.slice(1, 4); // Returns [2, 3, 4]
 Think of "splicing" as modifying or changing the original array.
 splice is used to add or remove elements from an array at a specified index.
 
-
 ```javascript
-Copy code
 const originalArray = [1, 2, 3, 4, 5];
 originalArray.splice(2, 1); // Removes 1 element at index 2
 // originalArray is now [1, 2, 4, 5]
@@ -92,3 +94,4 @@ In summary:
 
 - slice does not modify the original array and returns a new array.
 - splice modifies the original array by adding or removing elements.
+
