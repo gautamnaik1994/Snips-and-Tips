@@ -25,6 +25,7 @@
 ## 🖥 WEB DEV
 
 * [Typescript](web-dev/typescript.md)
+* [React State Management](web-dev/react-state-management.md)
 * [Redux Boilerplate](web-dev/redux-boilerplate.md)
 * [this keyword](web-dev/this-keyword.md)
 * [Array Methods](web-dev/array-methods.md)
