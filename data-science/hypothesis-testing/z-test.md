@@ -1,6 +1,28 @@
 # Z - Test
 
-## 2 sample z proportion test
+## Z Test for Testing Means
+
+### One Sample Z Test
+
+### Two Sample Z Test
+
+```python
+def TwoSampZTest(samp_mean_1, samp_mean_2, samp_std_1, samp_std_2, n1, n2):
+    denominator = np.sqrt((pow(samp_std_1, 2) / n1) + (pow(samp_std_2, 2) / n2))
+    z_score = (samp_mean_1 - samp_mean_2) / denominator
+    return z_score
+```
+
+When series data is given use following code
+
+```python
+from statsmodels.stats import weightstats as stests
+z_score, p_value = stests.ztest(list_1, list_2, alternative ='smaller')
+```
+
+## Proportion test
+
+### 2 sample z proportion test
 
 The Quidditch teams at Hogwarts conducted tryouts for two positions: **Chasers** and **Seekers**.
 

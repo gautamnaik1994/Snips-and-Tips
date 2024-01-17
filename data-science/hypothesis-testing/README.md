@@ -26,18 +26,16 @@ These real-world scenarios can help you associate Type 1 errors with false alarm
 
 ## Judge and Defendant Example
 
-**Ho:  Defendant is Innocent**   
+**Ho: Defendant is Innocent**  
 **Ha: Defendant is Guilty**
 
 Type 1 Error : Defendant is pronounced guilty, when in reality he is not guilty. In this case Ho was actually true but Judge said Ho is false.
 
 Type 2 Error :Defendant is pronounced innocent, when in reality he was guilty. In this case Ho was actually false but Judge said Ho is true.
 
-
-
 ## Pregnancy Example
 
-**Ho: Patient not pregnant**   
+**Ho: Patient not pregnant**  
 **Ha: Patient pregnant**
 
 Type 1 Error : Telling a man that he is pregnant  
