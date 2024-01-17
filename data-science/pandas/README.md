@@ -95,7 +95,7 @@ print (pd.value_counts(data["LoanAmount_Bin"], sort=False))
 
 ```
 
-#### 11 – Coding nominal data using Pandas
+#### Coding nominal data using Pandas
 
 Often, we find a case where we’ve to modify the categories of a nominal variable. This can be due to various reasons:
 

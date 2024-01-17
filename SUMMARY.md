@@ -18,9 +18,10 @@
 * [Handling high dimensionality data](data-science/handling-high-dimensionality-data/README.md)
   * [Weight of evidence and Information value](data-science/handling-high-dimensionality-data/weight-of-evidence-and-information-value.md)
 * [Probability](data-science/probability.md)
-* [Statistical Tests](data-science/statistical-tests.md)
-* [Hypothesis Testing](data-science/hypothesis-testing/README.md)
-  * [Z - Test](data-science/hypothesis-testing/z-test.md)
+* [Statistics](data-science/statistics/README.md)
+  * [Statistical Tests](data-science/statistics/statistical-tests.md)
+  * [Z - Test](data-science/statistics/z-test.md)
+  * [Hypothesis Testing](data-science/statistics/hypothesis-testing.md)
 
 ## 🖥 WEB DEV
 

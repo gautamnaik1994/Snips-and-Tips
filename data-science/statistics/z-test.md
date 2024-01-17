@@ -7,6 +7,8 @@
 ### Two Sample Z Test
 
 ```python
+import numpy as np
+
 def TwoSampZTest(samp_mean_1, samp_mean_2, samp_std_1, samp_std_2, n1, n2):
     denominator = np.sqrt((pow(samp_std_1, 2) / n1) + (pow(samp_std_2, 2) / n2))
     z_score = (samp_mean_1 - samp_mean_2) / denominator
