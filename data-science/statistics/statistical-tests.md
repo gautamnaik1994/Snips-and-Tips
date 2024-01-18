@@ -16,7 +16,7 @@ Now a new marketing manager has joined, and he believes this value is not valid 
 
 ## Kolmogorov–Smirnov Test (KS Test)
 
-This test checks if two sets of data have the same type of distribution.&#x20;
+This test checks if two sets of data have the same type of distribution
 
 ## Kruskal Wallis Test
 
@@ -26,7 +26,18 @@ This test does not assume that the data are normal, it does assume that the diff
 
 ## Levene
 
+This test checks if data arrays passed to it has equal variance
+
+## Shapiro-Wilk Test
+
+This test checks whether data has normal distribution 
+
 ## CHI Square
+
+This is used to check if 2 categorical variable are related
+
+
+## Different combinations and corresponding test
 
 | Scenario                                           | Statistical Test             | Example                                                                                                         |
 | -------------------------------------------------- | ---------------------------- | --------------------------------------------------------------------------------------------------------------- |
