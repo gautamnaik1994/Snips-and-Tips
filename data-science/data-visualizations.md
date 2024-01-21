@@ -9,7 +9,7 @@
 
 ## Subplot syntax
 
-To plot 3 x 2 plots
+### To plot 3 x 2 plots
 
 ```python
 variables = ["Age", "Education", "Usage", "Fitness", "Income", "Miles"]
@@ -25,10 +25,18 @@ for i in range(2):
 plt.show();
 ```
 
-Subplots using single line
+### Subplots using single line
 
 ```python
 data.plot(kind='density', subplots=True, layout=(3, 3), sharex=False)
+```
+
+To generate box plot with solid background color
+
+```python
+colors = dict(boxes='lightblue', whiskers='dimgrey', medians='dimgrey', caps='dimgrey')
+df.plot(kind='box', subplots=True, layout=(3, 4), sharex=False, figsize=(12, 15), patch_artist=True, color=colors);
+plt.suptitle("Outliers", y=0.92, fontsize=14);
 ```
 
 

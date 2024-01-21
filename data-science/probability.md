@@ -46,3 +46,10 @@ What is the probability that exactly 10 bulbs are defective?
 from scipy.stats import binom
 binom.pmf(k=10, n=40, p=0.25) # 0.14
 ```
+
+Article on different distributions 
+https://medium.com/mlearning-ai/9-important-data-distributions-real-world-examples-for-each-b804d9d95fe7
+
+https://medium.com/@snehabajaj108/the-poisson-exponential-distribution-using-python-2e9959fdcbc7
+
+https://medium.com/@nitin.data1997/p-value-explained-to-a-10-year-old-kid-bc9649c32dd2

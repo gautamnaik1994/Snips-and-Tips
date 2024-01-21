@@ -21,3 +21,11 @@ Good when there are more than 2 categories but will result in a sparse matrix wh
 
 When there are a lot of features like above 20, we can try binning them into 2 or 3 categories. for example: different car models can be binned into sports, sedans, and luxury depending on the problem statement.
 
+## Time and Date Transformation
+
+```python
+df['hr_sin'] = np.sin(df.hr*(2.*np.pi/24))
+df['hr_cos'] = np.cos(df.hr*(2.*np.pi/24))
+df['mnth_sin'] = np.sin((df.mnth-1)*(2.*np.pi/12)) 
+df['mnth_cos'] = np.cos((df.mnth-1)*(2.*np.pi/12))
+```
