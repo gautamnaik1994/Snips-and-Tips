@@ -28,6 +28,7 @@
 * [Typescript](web-dev/typescript.md)
 * [React State Management](web-dev/react-state-management.md)
 * [Redux Boilerplate](web-dev/redux-boilerplate.md)
+* [Intercept a HTTP request or response](web-dev/intercept-a-http-request-or-response.md)
 * [this keyword](web-dev/this-keyword.md)
 * [Array Methods](web-dev/array-methods.md)
 * [Throttle Debounce](web-dev/throttle-debounce-react.md)
