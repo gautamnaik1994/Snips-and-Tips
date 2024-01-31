@@ -53,3 +53,13 @@ https://medium.com/mlearning-ai/9-important-data-distributions-real-world-exampl
 https://medium.com/@snehabajaj108/the-poisson-exponential-distribution-using-python-2e9959fdcbc7
 
 https://medium.com/@nitin.data1997/p-value-explained-to-a-10-year-old-kid-bc9649c32dd2
+
+## Rules of Probability
+
+### Adition Rule
+
+P(A U B) = P(A) + P(B) - P(A ∩ B)
+
+### Multiplication Rule
+
+P(A ∩ B) = P(A|B) . P(B)

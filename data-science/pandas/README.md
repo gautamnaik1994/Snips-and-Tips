@@ -159,3 +159,9 @@ Here `.any()` select a row if one of the columns is 'NA' . Internally a numpy ma
 5     True
 dtype: bool
 ```
+
+#### List all individual values from categorical columns and their count
+
+```python
+df[categorical_columns].melt().groupby(['variable', 'value'])[['value']].count()
+```
