@@ -22,6 +22,8 @@
   * [Statistical Tests](data-science/statistics/statistical-tests.md)
   * [Z - Test](data-science/statistics/z-test.md)
   * [Hypothesis Testing](data-science/statistics/hypothesis-testing.md)
+* [SQL](data-science/sql/README.md)
+  * [Creating new columns](data-science/sql/creating-new-columns.md)
 
 ## 🖥 WEB DEV
 
