@@ -23,6 +23,7 @@
   * [Z - Test](data-science/statistics/z-test.md)
   * [Hypothesis Testing](data-science/statistics/hypothesis-testing.md)
 * [SQL](data-science/sql/README.md)
+  * [SQL Tips](data-science/sql/sql-tips.md)
   * [Creating new columns](data-science/sql/creating-new-columns.md)
 
 ## 🖥 WEB DEV
