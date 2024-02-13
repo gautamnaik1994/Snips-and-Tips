@@ -36,6 +36,10 @@
 * [Array Methods](web-dev/array-methods.md)
 * [Throttle Debounce](web-dev/throttle-debounce-react.md)
 
+## 💻 Product Analytics
+
+* [Product Sense](product-analytics/product-sense.md)
+
 ## 🖥 Terminal
 
 * [Terminal Commands](terminal/terminal-commands.md)
