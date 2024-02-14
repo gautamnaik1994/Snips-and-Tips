@@ -43,6 +43,7 @@
 ## 🖥 Terminal
 
 * [Terminal Commands](terminal/terminal-commands.md)
+* [Jupyter Notebook 2 HTML](terminal/jupyter-notebook-2-html.md)
 
 ## 🪛 Tools and Libraries
 
