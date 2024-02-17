@@ -1,6 +1,6 @@
 # Jupyter Notebook 2 HTML
 
-Following is the untested Github Action code to convert and host Jupyter notebook on Github Pages
+Following is the untested Github Action code to convert and host Jupyter notebook on Github Pages. 
 
 ```yaml
 name: Build and Publish Jupyter Notebook
