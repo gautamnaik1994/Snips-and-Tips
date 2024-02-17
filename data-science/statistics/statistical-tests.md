@@ -50,3 +50,16 @@ This is used to check if 2 categorical variable are related
 | Categorical vs. Categorical                        | Chi-square Test              | Examining the association between gender and smoking status.                                                    |
 | Categorical vs. Categorical (Association)          | Cramér's V                   | Measuring the strength of association between political affiliation and voting behavior.                        |
 | Numerical vs. Categorical (Ordinal)                | Kruskal-Wallis Test          | Comparing the median satisfaction scores for customers across different levels of service quality.              |
+
+
+1 sample z test for mean  
+1 sample t test for mean 
+
+1 sample z test for proportion 
+1 sample t test for proportion
+
+
+2 sample independent test for mean 
+2 sample independent test for proportion
+
+Paired test
