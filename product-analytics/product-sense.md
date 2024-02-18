@@ -1,15 +1,30 @@
 # Product Sense
 
-### Product Diagnostics&#x20;
+## Product Diagnostics
 
-Root Cause Analytics
+Analyse the metric change
 
-#### CRIED Framework
+### CRIED Framework
 
-### New Product or Feature
+- C: Clarify
+- R: Ruleout
+- I: Internal
+  - TROPICS Framework
+  - T: Time
+  - R: Region
+  - O: Other related
+  - P: Platform
+  - C: Cannabilization
+  - Segmentation
+- E: External
+- D: Data
 
-Measuring Performance
+## New Product or Feature
 
-### Product Design
+Measuring Performance and Success
 
-Feature Recommendation&#x20;
+## Product Design
+
+Feature Recommendation
+
+### Product Improvement
