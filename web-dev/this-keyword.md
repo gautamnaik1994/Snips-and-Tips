@@ -10,7 +10,7 @@ const obj = {
   },
 
   // Regular function expression (this refers to the calling object)
-  nonArrow: function() {
+  nonArrow: function () {
     console.log("Regular Function:", this);
   },
 
@@ -25,7 +25,7 @@ const obj = {
   },
 
   // Using bind to explicitly set the value of this
-  bindMethod: function() {
+  bindMethod: function () {
     function boundFunction() {
       console.log("Bind Method:", this);
     }
@@ -33,22 +33,22 @@ const obj = {
     boundFunctionWithThis();
   },
   // window will get printed
-  nonBindMethod: function() {
+  nonBindMethod: function () {
     function nFunction() {
       console.log("Non Bind Method:", this);
     }
     nFunction();
   },
   //obj will get printed
-  nonBindMethodArrow: function() {
+  nonBindMethodArrow: function () {
     const nFunction = () => {
       console.log("Non Bind Arrow Method:", this);
-    }
+    };
     nFunction();
   },
 
   // Using call to invoke a function with a specific this value
-  callMethod: function() {
+  callMethod: function () {
     function calledFunction() {
       console.log("Call Method:", this);
     }
@@ -56,17 +56,17 @@ const obj = {
   },
 
   // Using apply to invoke a function with a specific this value and arguments provided as an array
-  applyMethod: function() {
+  applyMethod: function () {
     function appliedFunction() {
       console.log("Apply Method:", this);
     }
     appliedFunction.apply(this);
   },
   // Callback function (this depends on how the function is invoked)
-  callbackExample: function(callback) {
+  callbackExample: function (callback) {
     console.log("Callback Example:", this);
     callback();
-  }
+  },
 };
 
 obj.arrow(); // Outputs: Arrow Function: [object global] (or undefined in strict mode)
@@ -75,7 +75,7 @@ obj.namedFunction(); // Outputs: Method Shorthand: { name: 'Gautam', ... }
 obj.functionDeclaration(); // Outputs: Function Declaration: [object global] (or undefined in strict mode)
 obj.bindMethod(); // Outputs: Bind Method: { name: 'Gautam', ... }
 obj.callMethod(); // Outputs: Call Method: { name: 'Gautam', ... }
-obj.applyMethod(); // Outputs: Apply Method: { name: 'Gautam', ... }  
+obj.applyMethod(); // Outputs: Apply Method: { name: 'Gautam', ... }
 
 // Using the callbackExample method with different callback functions
 obj.callbackExample(() => {
@@ -83,14 +83,13 @@ obj.callbackExample(() => {
   console.log("Inside Arrow Callback:", this); //Window
 });
 
-obj.callbackExample(function() {
+obj.callbackExample(function () {
   //Obj will print first
   console.log("Inside Regular Callback:", this); //Window
 });
 obj.callbackExample(obj.namedFunction.bind(obj)); //Obj first and sec
-obj.nonBindMethod() //window
-obj.nonBindMethodArrow() //obj
-
+obj.nonBindMethod(); //window
+obj.nonBindMethodArrow(); //obj
 ```
 
 {% embed url="https://codepen.io/gautamnaik1994/pen/oNmVJLj?editors=0011" %}

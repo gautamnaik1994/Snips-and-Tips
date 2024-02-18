@@ -6,8 +6,6 @@ Root Cause Analytics
 
 #### CRIED Framework
 
-
-
 ### New Product or Feature
 
 Measuring Performance

@@ -30,12 +30,11 @@ This test checks if data arrays passed to it has equal variance
 
 ## Shapiro-Wilk Test
 
-This test checks whether data has normal distribution 
+This test checks whether data has normal distribution
 
 ## CHI Square
 
 This is used to check if 2 categorical variable are related
-
 
 ## Different combinations and corresponding test
 
@@ -51,15 +50,13 @@ This is used to check if 2 categorical variable are related
 | Categorical vs. Categorical (Association)          | Cramér's V                   | Measuring the strength of association between political affiliation and voting behavior.                        |
 | Numerical vs. Categorical (Ordinal)                | Kruskal-Wallis Test          | Comparing the median satisfaction scores for customers across different levels of service quality.              |
 
-
 1 sample z test for mean  
-1 sample t test for mean 
+1 sample t test for mean
 
-1 sample z test for proportion 
+1 sample z test for proportion
 1 sample t test for proportion
 
-
-2 sample independent test for mean 
+2 sample independent test for mean
 2 sample independent test for proportion
 
 Paired test

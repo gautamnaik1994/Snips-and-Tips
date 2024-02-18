@@ -151,7 +151,7 @@ if p_value < alpha:
     print("Reject the null hypothesis: There is higher user satisfaction for Season 2.")
 else:
     print("Fail to reject the null hypothesis: No evidence of higher user satisfaction for Season 2.")
-    
+
 """
 Z-statistic: -0.46717659215115714
 p-value: 0.3201867697265242

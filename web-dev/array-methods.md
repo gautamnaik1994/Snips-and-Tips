@@ -94,4 +94,3 @@ In summary:
 
 - slice does not modify the original array and returns a new array.
 - splice modifies the original array by adding or removing elements.
-

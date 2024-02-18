@@ -108,7 +108,7 @@ def coding(col, codeDict):
   for key, value in codeDict.items():
     colCoded.replace(key, value, inplace=True)
   return colCoded
- 
+
 #Coding LoanStatus as Y=1, N=0:
 print 'Before Coding:'
 print pd.value_counts(data["Loan_Status"])

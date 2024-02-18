@@ -10,4 +10,3 @@ SELECT profession AS department,
 FROM employee_list
 GROUP BY profession;
 ```
-

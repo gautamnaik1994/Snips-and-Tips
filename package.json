@@ -1,0 +1,19 @@
+{
+  "name": "snips-and-tips",
+  "version": "1.0.0",
+  "description": "--- layout:   title:     visible: false   description:     visible: false   tableOfContents:     visible: true   outline:     visible: false   pagination:     visible: true ---",
+  "main": "index.js",
+  "devDependencies": {
+    "prettier": "^3.2.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write \"**/*.md\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gautamnaik1994-GitHub:gautamnaik1994/Snips-and-Tips.git"
+  },
+  "author": "",
+  "license": "ISC"
+}

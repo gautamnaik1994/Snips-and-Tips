@@ -12,7 +12,7 @@ dt.fread("file").to_pandas()
 ```python
 duckdb.sql(
     """
-        select 
+        select
          days_till_primary_close,
          days_till_final_close,
          loans_outstanding_balance,

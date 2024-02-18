@@ -16,21 +16,21 @@ df.apply(lambda x:print(x), axis=0)
     2      21.01
     3      23.68
     4      24.59
-          ...  
+          ...
     Name: total_bill, Length: 244, dtype: float64
     0      1.01
     1      1.66
     2      3.50
     3      3.31
     4      3.61
-          ... 
+          ...
     Name: tip, Length: 244, dtype: float64
     0      Female
     1        Male
     2        Male
     3        Male
     4      Female
-            ...  
+            ...
     Name: sex, Length: 244, dtype: category
     Categories (2, object): ['Male', 'Female']
     0       No
@@ -38,7 +38,7 @@ df.apply(lambda x:print(x), axis=0)
     2       No
     3       No
     4       No
-          ... 
+          ...
     Name: smoker, Length: 244, dtype: category
     Categories (2, object): ['Yes', 'No']
     0       Sun
@@ -46,7 +46,7 @@ df.apply(lambda x:print(x), axis=0)
     2       Sun
     3       Sun
     4       Sun
-          ... 
+          ...
     Name: day, Length: 244, dtype: category
     Categories (4, object): ['Thur', 'Fri', 'Sat', 'Sun']
     0      Dinner
@@ -54,7 +54,7 @@ df.apply(lambda x:print(x), axis=0)
     2      Dinner
     3      Dinner
     4      Dinner
-            ...  
+            ...
     Name: time, Length: 244, dtype: category
     Categories (2, object): ['Lunch', 'Dinner']
     0      2

@@ -114,4 +114,3 @@ This means that the probability of having to wait n+k trials
 (where n is the current number of trials and k is a positive integer)
 for the first success, given that n trials have already passed without success,
 is the same as the probability of having to wait k trials from the beginning.
-

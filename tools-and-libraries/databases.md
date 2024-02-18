@@ -10,9 +10,9 @@ Also includes Kafka
 
 ## Lightweight NoSQL databases for Python
 
-* Pickle DB
-* TinyDB
-* ZodDB
+- Pickle DB
+- TinyDB
+- ZodDB
 
 ## Python ORM for Sqlite
 

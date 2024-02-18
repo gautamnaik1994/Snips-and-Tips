@@ -1,6 +1,6 @@
 # Jupyter Notebook 2 HTML
 
-Following is the untested Github Action code to convert and host Jupyter notebook on Github Pages. 
+Following is the untested Github Action code to convert and host Jupyter notebook on Github Pages.
 
 ```yaml
 name: Build and Publish Jupyter Notebook
@@ -8,7 +8,7 @@ name: Build and Publish Jupyter Notebook
 on:
   push:
     branches:
-      - main  # change this to your default branch
+      - main # change this to your default branch
 
 jobs:
   build:
@@ -37,5 +37,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./path/to/converted/html
-
 ```
