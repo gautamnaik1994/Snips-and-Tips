@@ -26,7 +26,7 @@
   * [SQL Tips](data-science/sql/sql-tips.md)
   * [Creating new columns](data-science/sql/creating-new-columns.md)
 
-## 🖥 WEB DEV
+## 🖥️ WEB DEV
 
 * [Typescript](web-dev/typescript.md)
 * [React State Management](web-dev/react-state-management.md)
@@ -35,12 +35,13 @@
 * [this keyword](web-dev/this-keyword.md)
 * [Array Methods](web-dev/array-methods.md)
 * [Throttle Debounce](web-dev/throttle-debounce-react.md)
+* [Media Queries](web-dev/media-queries.md)
 
 ## 💻 Product Analytics
 
 * [Product Sense](product-analytics/product-sense.md)
 
-## 🖥 Terminal
+## 🖥️ Terminal
 
 * [Terminal Commands](terminal/terminal-commands.md)
 * [Jupyter Notebook 2 HTML](terminal/jupyter-notebook-2-html.md)
