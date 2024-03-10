@@ -71,7 +71,5 @@ fig.update_layout(xaxis_rangeslider_visible=True)
 fig.show()
 ```
 
-![Gantt Plot](../.gitbook/assets/gantt.png)
-
 <figure><img src="../.gitbook/assets/gantt.png" alt=""><figcaption><p>Gantt Chart</p></figcaption></figure>
 
