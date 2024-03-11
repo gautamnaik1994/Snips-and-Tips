@@ -54,3 +54,7 @@
 ## 🚟 Backend
 
 * [Fast API CRUD](backend/fast-api-crud.md)
+
+## 💸 Quant Finance
+
+* [Factor Investing](quant-finance/factor-investing.md)
