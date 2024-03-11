@@ -53,7 +53,7 @@ sns.countplot(x="Product_Category", data=df,
     order=df["Product_Category"].value_counts().iloc[:10].index)
 ```
 
-### Plot a Gantt Chart using Plotly
+## Plot a Gantt Chart using Plotly
 
 |      | symbol     | buy\_date  | sell\_date | buy\_price  | sell\_price | quantity | days\_diff | profit |
 | ---- | ---------- | ---------- | ---------- | ----------- | ----------- | -------- | ---------- | ------ |
