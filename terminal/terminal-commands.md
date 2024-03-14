@@ -15,3 +15,5 @@ scp ubuntu@ip_address:/home/ubuntu/path /Users/some_path
 Test text added from android
 
 test text
+
+Sample text
