@@ -40,6 +40,7 @@
 ## 💻 Product Analytics
 
 * [Product Sense](product-analytics/product-sense.md)
+* [Customer Segmentation](product-analytics/customer-segmentation.md)
 
 ## 🖥️ Terminal
 
