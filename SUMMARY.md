@@ -57,4 +57,9 @@
 
 ## 💸 Quant Finance
 
+* [Misc](quant-finance/misc.md)
 * [Factor Investing](quant-finance/factor-investing.md)
+
+## 🎮 Game Dev
+
+* [Misc](game-dev/misc.md)
