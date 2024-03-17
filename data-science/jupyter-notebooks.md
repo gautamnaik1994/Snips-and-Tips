@@ -13,6 +13,14 @@ InteractiveShell.ast_node_interactivity = "all"
 
 If you want to print multiple varibles in one line then just put the names of varibles with comma in between
 
+### Alert Boxes
+
+```markdown
+<div class="alert alert-danger">
+    <b> Danger </b> Danger alert box.
+</div>
+```
+
 ### Run SQL queries
 
 Use JupySQL plugin
