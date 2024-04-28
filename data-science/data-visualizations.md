@@ -70,3 +70,23 @@ fig = px.timeline(dataframe, x_start="buy_date", x_end="sell_date", y="symbol", 
 fig.update_layout(xaxis_rangeslider_visible=True)
 fig.show()
 ```
+
+### Plot Line equation using matplotlib
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+x_values = np.linspace(-10, 10, 100)  
+
+y_values = 3 * x_values + 4
+
+# Plot the graph
+plt.plot(x_values, y_values, label='y = 3x + 4')
+plt.xlabel('x')
+plt.ylabel('y')
+plt.title('Plot of y = 3x + 4')
+plt.grid(True)
+plt.legend()
+plt.show()
+```
