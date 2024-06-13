@@ -13,6 +13,7 @@
   * [Feature Scaling](data-science/feature-engineering/feature-scaling.md)
 * [Pandas](data-science/pandas/README.md)
   * [Pandas Apply Function](data-science/pandas/pandas-apply-function.md)
+* [Apache Spark](data-science/apache-spark.md)
 * [Data Visualizations](data-science/data-visualizations.md)
 * [Jupyter Notebooks](data-science/jupyter-notebooks.md)
 * [Handling high dimensionality data](data-science/handling-high-dimensionality-data/README.md)
