@@ -6,13 +6,34 @@ Create Session
 
 ```python
 from pyspark.sql import SparkSession
-spark = SparkSession.builder.appName("SparkSQL").getOrCreate()
+
+spark = SparkSession.builder \
+    .appName("SessionName") \
+    .config("spark.sql.debug.maxToStringFields", 1000) \
+    .config("spark.sql.execution.arrow.pyspark.enabled", "true") \
+    .config("spark.sql.shuffle.partitions", 1) \
+    .config("spark.network.timeout", "120s") \
+    .config("spark.executor.heartbeatInterval", "10s") \
+    .getOrCreate()
 ```
 
 Read CSV
 
 ```python
-spark.read.csv("./test.csv", header=True, inferSchema=True)
+df = spark.read \
+    .option("header", "true") \
+    .option("inferSchema", "true") \
+    .option("multiLine", "true") \
+    .option("escape", "\"") \
+    .csv("./test.csv")
+```
+
+Drop null values
+
+```python
+df.na.drop(how="all") #if all columns have null values
+df.na.drop(how="any") #if any one columns have null value
+df.na.drop(how="any", thresh=2) #if atleast there are 2 null values
 ```
 
 Target Encoding
@@ -93,4 +114,31 @@ df_target_encoded.show()
 |    0|  0.0|
 |    1|  1.0|
 +-----+-----+
+```
+
+Window Functions and Coalesce
+
+```python
+window_spec = Window.partitionBy("Driver_ID")
+
+df = df.withColumn(
+    "Age",
+    sf.coalesce(sf.col("Age"), sf.first("Age", True).over(window_spec))
+)
+```
+
+Conditional column values
+
+```python
+default_date = "2020-12-31"
+
+df = df.withColumn(
+    "Tenure",
+      sf.abs(
+        sf.datediff(
+            sf.when(sf.col("Last_Working_Date").isNull(), sf.lit(default_date)).otherwise(sf.col("Last_Working_Date")),
+            sf.col("Date_Of_Joining")
+        )
+    )
+)
 ```
