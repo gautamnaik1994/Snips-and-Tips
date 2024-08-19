@@ -40,3 +40,22 @@ ORDER BY cnt DESC
 ### Interview Questions
 
 {% embed url="https://quip.com/2gwZArKuWk7W" %}
+
+### Postgress SQL date diff
+
+```sql
+SELECT * 
+FROM tablexyz
+WHERE 
+  DATEDIFF('2024-01-31', last_active_date) > 30;
+  
+-- using cast
+SELECT * 
+FROM tablexyz
+WHERE 
+  DATEDIFF(CAST('2024-01-31' AS date), CAST(last_active_date AS date)) > 30;
+```
+
+{% embed url="https://www.commandprompt.com/education/how-to-subtract-days-from-a-date-in-postgresql/" %}
+
+{% embed url="https://www.commandprompt.com/education/how-to-find-difference-between-two-dates-in-postgresql/" %}
