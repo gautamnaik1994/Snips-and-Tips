@@ -90,3 +90,40 @@ plt.grid(True)
 plt.legend()
 plt.show()
 ```
+
+Crosstab Plotly subplot
+
+```python
+fig = make_subplots(rows=1, cols=2, subplot_titles=("Term vs Loan Status", "Grade vs Loan Status"))
+
+term_vs_loan_status = pd.crosstab(
+    pdf['term'], pdf['loan_status'], normalize="index")
+grade_vs_loan_status = pd.crosstab(
+    pdf['grade'], pdf['loan_status'], normalize="index")
+
+
+colors = ['#636EFA', '#EF553B', '#00CC96', '#AB63FA', '#FFA15A',
+          '#19D3F3', '#FF6692', '#B6E880', '#FF97FF', '#FECB52']
+
+for i, col in enumerate(term_vs_loan_status.columns):
+    fig.add_trace(go.Bar(name=col, x=term_vs_loan_status.index,
+                  y=term_vs_loan_status[col], marker_color=colors[i % len(colors)], showlegend=True), row=1, col=1)
+
+for i, col in enumerate(grade_vs_loan_status.columns):
+    fig.add_trace(go.Bar(name=col, x=grade_vs_loan_status.index,
+                  y=grade_vs_loan_status[col], marker_color=colors[i % len(colors)], showlegend=False), row=1, col=2)
+
+fig.update_layout(
+    height=500, width=1200,
+    title_text="Crosstab Plots of Different Features",
+    barmode='stack',
+    legend=dict(
+        yanchor="top",
+        y=-0.2,
+        xanchor="center",
+        x=0.5,
+        orientation="h"
+    )
+)
+fig.show();
+```
