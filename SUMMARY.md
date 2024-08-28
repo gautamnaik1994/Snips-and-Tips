@@ -4,6 +4,7 @@
 
 ## 📊 Data Science
 
+* [Debugging ML Models](data-science/debugging-ml-models.md)
 * [Polars Dataframe Library](data-science/polars-dataframe-library.md)
 * [Loading large data](data-science/loading-large-data.md)
 * [Handling Imbalanced Dataset](data-science/handling-imbalanced-dataset.md)
