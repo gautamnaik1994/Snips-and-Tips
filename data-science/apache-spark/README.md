@@ -88,7 +88,7 @@ def target_mean_encoding(df, col, target):
 df_target_encoded = target_mean_encoding(df, col=['cate1'], target='label')
 
 df_target_encoded.show()
->>> 
+>>>
 +-----+-------------------+
 |label|cate1_mean_encoding|
 +-----+-------------------+

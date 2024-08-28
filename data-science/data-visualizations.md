@@ -2,10 +2,10 @@
 
 ## Dataviz library
 
-* Pandas-Profiling
-* Sweetviz
-* Autoviz
-* D-Tale
+- Pandas-Profiling
+- Sweetviz
+- Autoviz
+- D-Tale
 
 ## Subplot syntax
 
@@ -55,13 +55,13 @@ sns.countplot(x="Product_Category", data=df,
 
 ## Plot a Gantt Chart using Plotly
 
-|      | symbol     | buy\_date  | sell\_date | buy\_price  | sell\_price | quantity | days\_diff | profit |
-| ---- | ---------- | ---------- | ---------- | ----------- | ----------- | -------- | ---------- | ------ |
-| 1510 | PERSISTENT | 2023-04-25 | 2023-06-09 | 4448.000000 | 4860.000000 | 2.0      | 7 days     | 824.0  |
-| 367  | BEL        | 2020-05-28 | 2020-07-29 | 21.390625   | 29.890625   | 467.0    | 16 days    | 3969.5 |
-| 1593 | POONAWALLA | 2022-06-10 | 2022-06-13 | 247.750000  | 230.625000  | 40.0     | 29 days    | -685.0 |
-| 493  | CIPLA      | 2021-11-24 | 2021-11-25 | 882.000000  | 888.500000  | 11.0     | 2 days     | 71.5   |
-| 65   | ADANIENT   | 2022-05-31 | 2022-06-01 | 2166.000000 | 2148.000000 | 4.0      | 5 days     | -72.0  |
+|      | symbol     | buy_date   | sell_date  | buy_price   | sell_price  | quantity | days_diff | profit |
+| ---- | ---------- | ---------- | ---------- | ----------- | ----------- | -------- | --------- | ------ |
+| 1510 | PERSISTENT | 2023-04-25 | 2023-06-09 | 4448.000000 | 4860.000000 | 2.0      | 7 days    | 824.0  |
+| 367  | BEL        | 2020-05-28 | 2020-07-29 | 21.390625   | 29.890625   | 467.0    | 16 days   | 3969.5 |
+| 1593 | POONAWALLA | 2022-06-10 | 2022-06-13 | 247.750000  | 230.625000  | 40.0     | 29 days   | -685.0 |
+| 493  | CIPLA      | 2021-11-24 | 2021-11-25 | 882.000000  | 888.500000  | 11.0     | 2 days    | 71.5   |
+| 65   | ADANIENT   | 2022-05-31 | 2022-06-01 | 2166.000000 | 2148.000000 | 4.0      | 5 days    | -72.0  |
 
 ```python
 import plotly.express as px
@@ -77,7 +77,7 @@ fig.show()
 import numpy as np
 import matplotlib.pyplot as plt
 
-x_values = np.linspace(-10, 10, 100)  
+x_values = np.linspace(-10, 10, 100)
 
 y_values = 3 * x_values + 4
 

@@ -6,9 +6,7 @@ Command to inspect the content of an image created
 docker run -it --name temp_container imageName /bin/sh
 ```
 
-where "temp\_container" is the name of temporary container
-
-
+where "temp_container" is the name of temporary container
 
 ```bash
 docker images

@@ -30,7 +30,7 @@ class CustomTransformer(Transformer, HasInputCol, HasOutputCol, DefaultParamsRea
         # Set input and output columns using PySpark's shared param functionality
         self._setDefault(my_param="default_value")
         self._set(my_param=my_param_value)
-        
+
         # Set input and output columns if provided
         if inputCol is not None:
             self.setInputCol(inputCol)
@@ -54,7 +54,7 @@ class CustomTransformer(Transformer, HasInputCol, HasOutputCol, DefaultParamsRea
         input_col = self.getInputCol()
         output_col = self.getOutputCol()
         my_param_value = self.getOrDefault(self.my_param)
-        
+
         # Implement your transformation logic here
         # Example: Adding a constant value to the input column
         transformed_df = df.withColumn(output_col, sf.col(input_col) + sf.lit(my_param_value))
@@ -89,7 +89,7 @@ custom_transformer = CustomTransformer(inputCol="input_column_name", outputCol="
 
 # Create a pipeline
 pipeline = Pipeline(stages=[
-    custom_transformer, 
+    custom_transformer,
     # add other transformers like VectorAssembler, OneHotEncoder, etc.
 ])
 
@@ -119,7 +119,7 @@ class ClassWeightTransformer(Transformer, DefaultParamsReadable, DefaultParamsWr
         class_weights = df.groupBy(self.target_col).count().collect()
         total_count = df.count()
         weights = {row[self.target_col]: total_count / row['count'] for row in class_weights}
-        
+
         # Apply class weights
         df = df.withColumn(
             self.output_col,
@@ -134,7 +134,7 @@ from pyspark.ml import Pipeline
 class_weight_transformer = ClassWeightTransformer(target_col="Churned")
 
 # Create a pipeline
-pipeline = Pipeline(stages=[class_weight_transformer, 
+pipeline = Pipeline(stages=[class_weight_transformer,
                             # add other transformers like VectorAssembler, OneHotEncoder, etc.
                             ])
 
