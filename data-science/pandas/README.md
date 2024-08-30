@@ -165,3 +165,50 @@ dtype: bool
 ```python
 df[categorical_columns].melt().groupby(['variable', 'value'])[['value']].count()
 ```
+
+#### Bubble plot
+
+Dataframe
+
+| Country   | Year | Exports            |
+|-----------|------|--------------------|
+| Country O | 2008 | 28.688524590163933 |
+| Country O | 2004 | 25.68807339449541  |
+| Country O | 1996 | 5.405405405405405  |
+| Country O | 2002 | 17.094017094017094 |
+| Country O | 1992 | 18.72791519434629  |
+
+**Plotly Version**
+
+```python
+import pandas as pd
+import plotly.express as px
+df = df.sort_values("Country", ascending = False)
+
+fig = px.scatter(
+    df, y='Country', x='Year', color='Exports', size='Exports', size_max=20,
+    color_continuous_scale = px.colors.sequential.RdBu,
+)
+fig.update_layout(
+        paper_bgcolor="white",
+        plot_bgcolor="white",
+    )
+fig.update_yaxes(showgrid=True, gridwidth=1, gridcolor='LightGray')
+fig.update_xaxes(showgrid=True, gridwidth=1, gridcolor='LightGray')
+fig.update_layout(height=500, width=1000)
+fig.update_coloraxes(colorbar=dict(title='Exports'))
+fig.update_traces(marker=dict(sizeref=0.09))
+fig.update_yaxes(title="Country")
+fig.update_xaxes(title='Year')
+fig.update_layout(showlegend=False)
+fig.show()
+```
+
+**SeaBorn Version**
+
+```python
+plt.figure(figsize=(15, 5))
+sns.scatterplot(data=df, x='Year', y='Country', size='Exports', sizes=(20, 200), hue='Exports');
+plt.title('Exports by Country and Year')
+plt.show()
+```
