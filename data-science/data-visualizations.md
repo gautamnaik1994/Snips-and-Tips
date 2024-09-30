@@ -2,10 +2,10 @@
 
 ## Dataviz library
 
-- Pandas-Profiling
-- Sweetviz
-- Autoviz
-- D-Tale
+* Pandas-Profiling
+* Sweetviz
+* Autoviz
+* D-Tale
 
 ## Subplot syntax
 
@@ -55,13 +55,13 @@ sns.countplot(x="Product_Category", data=df,
 
 ## Plot a Gantt Chart using Plotly
 
-|      | symbol     | buy_date   | sell_date  | buy_price   | sell_price  | quantity | days_diff | profit |
-| ---- | ---------- | ---------- | ---------- | ----------- | ----------- | -------- | --------- | ------ |
-| 1510 | PERSISTENT | 2023-04-25 | 2023-06-09 | 4448.000000 | 4860.000000 | 2.0      | 7 days    | 824.0  |
-| 367  | BEL        | 2020-05-28 | 2020-07-29 | 21.390625   | 29.890625   | 467.0    | 16 days   | 3969.5 |
-| 1593 | POONAWALLA | 2022-06-10 | 2022-06-13 | 247.750000  | 230.625000  | 40.0     | 29 days   | -685.0 |
-| 493  | CIPLA      | 2021-11-24 | 2021-11-25 | 882.000000  | 888.500000  | 11.0     | 2 days    | 71.5   |
-| 65   | ADANIENT   | 2022-05-31 | 2022-06-01 | 2166.000000 | 2148.000000 | 4.0      | 5 days    | -72.0  |
+|      | symbol     | buy\_date  | sell\_date | buy\_price  | sell\_price | quantity | days\_diff | profit |
+| ---- | ---------- | ---------- | ---------- | ----------- | ----------- | -------- | ---------- | ------ |
+| 1510 | PERSISTENT | 2023-04-25 | 2023-06-09 | 4448.000000 | 4860.000000 | 2.0      | 7 days     | 824.0  |
+| 367  | BEL        | 2020-05-28 | 2020-07-29 | 21.390625   | 29.890625   | 467.0    | 16 days    | 3969.5 |
+| 1593 | POONAWALLA | 2022-06-10 | 2022-06-13 | 247.750000  | 230.625000  | 40.0     | 29 days    | -685.0 |
+| 493  | CIPLA      | 2021-11-24 | 2021-11-25 | 882.000000  | 888.500000  | 11.0     | 2 days     | 71.5   |
+| 65   | ADANIENT   | 2022-05-31 | 2022-06-01 | 2166.000000 | 2148.000000 | 4.0      | 5 days     | -72.0  |
 
 ```python
 import plotly.express as px
@@ -127,3 +127,70 @@ fig.update_layout(
 )
 fig.show();
 ```
+
+### Polar Plot
+
+```python
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
+def create_polar_plot(data: np.ndarray, features: list, cluster_label: int):
+    num_vars = len(features)
+
+    # Compute angle of each axis (in radians)
+    angles = np.linspace(0, 2 * np.pi, num_vars, endpoint=False).tolist()
+
+    # The plot is made in a circular (polar) form, so we need to "close the loop"
+    data = np.concatenate((data, [data[0]]))
+    angles += angles[:1]
+
+    fig, ax = plt.subplots(figsize=(6, 6), subplot_kw=dict(polar=True))
+
+    ax.fill(angles, data, color='blue', alpha=0.25)
+    ax.plot(angles, data, color='blue', linewidth=2)
+
+    ax.set_xticks(angles[:-1])
+    ax.set_xticklabels(features)
+
+    plt.title(f'Cluster {cluster_label}', size=20, color='blue', y=1.1)
+
+    plt.show()
+
+def create_combined_polar_plot(normalized_means, features, cluster_labels):
+    num_vars = len(features)
+    angles = np.linspace(0, 2 * np.pi, num_vars, endpoint=False).tolist()
+    angles += angles[:1]
+
+    fig, ax = plt.subplots(figsize=(12, 12), subplot_kw=dict(polar=True))
+
+    for i, data in enumerate(normalized_means):
+        data = np.concatenate((data, [data[0]]))
+        ax.fill(angles, data, alpha=0.25, label=f'Cluster {cluster_labels[i]}')
+        ax.plot(angles, data, linewidth=2)
+
+    ax.set_xticks(angles[:-1])
+    ax.set_xticklabels(features)
+
+    plt.title('Cluster Comparison', size=20, y=1.1)
+    plt.legend(loc='upper right', bbox_to_anchor=(1.1, 1.1))
+    plt.show()
+```
+
+**Usage**
+
+````python
+cluster_means = df.group_by("y_kmeans").mean().to_pandas().drop(["y_kmeans"], axis=1)
+scaler = MinMaxScaler()
+normalized_means = scaler.fit_transform(cluster_means)
+
+features =cluster_means.columns.to_list()
+
+##Single polar plot
+for cluster in range(cluster_means.shape[0]):
+    create_polar_plot(normalized_means[cluster], features, cluster)
+    
+##Combine Polar Plot```python
+cluster_labels = df["y_kmeans"].unique().to_list()
+create_combined_polar_plot(normalized_means, features, cluster_labels)
+````
