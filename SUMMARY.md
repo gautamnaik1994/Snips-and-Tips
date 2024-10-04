@@ -4,6 +4,7 @@
 
 ## 📊 Data Science
 
+* [Backpropagation in Deep Learning](data-science/backpropagation-in-deep-learning.md)
 * [Debugging ML Models](data-science/debugging-ml-models.md)
 * [Polars Dataframe Library](data-science/polars-dataframe-library.md)
 * [Loading large data](data-science/loading-large-data.md)
