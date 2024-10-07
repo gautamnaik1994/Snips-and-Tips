@@ -57,3 +57,18 @@ WHERE
 {% embed url="https://www.commandprompt.com/education/how-to-subtract-days-from-a-date-in-postgresql/" %}
 
 {% embed url="https://www.commandprompt.com/education/how-to-find-difference-between-two-dates-in-postgresql/" %}
+
+\*\*Use row number/rank in ascending and decending order to find first and last row
+
+```sql
+with cte as (
+    select 
+    city
+    , country
+    , round(population/area) density
+    , rank() over( order by population/area) as rn
+    , rank() over( order by (population/area) desc) as rn2
+    from cities_population where area <> 0
+)
+select city, country, density from cte where rn=1 or rn2=1
+```
