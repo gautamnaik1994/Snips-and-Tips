@@ -31,6 +31,10 @@
   * [SQL Tips](data-science/sql/sql-tips.md)
   * [Creating new columns](data-science/sql/creating-new-columns.md)
 
+## 🐲 DSA
+
+* [Arrays](dsa/arrays.md)
+
 ## 🖥️ WEB DEV
 
 * [Typescript](web-dev/typescript.md)
