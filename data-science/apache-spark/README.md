@@ -2,6 +2,49 @@
 
 ## Common Snippets
 
+Initialize Spark Session&#x20;
+
+```python
+import os
+import sys
+
+SPARK_HOME = "/opt/homebrew/Cellar/apache-spark/3.5.3/libexec"
+JAVA_HOME = '/opt/homebrew/opt/openjdk@17'
+
+os.environ['SPARK_HOME'] = SPARK_HOME
+os.environ['JAVA_HOME'] = JAVA_HOME
+sys.path.extend([
+    f"{SPARK_HOME}/python/lib/py4j-0.10.9.7-src.zip",
+    f"{SPARK_HOME}/python/lib/pyspark.zip",
+])
+
+from pyspark.sql import SparkSession
+spark = SparkSession.builder\
+    .master('local[*]') \
+    .getOrCreate()
+
+```
+
+Using findspark
+
+```python
+import findspark
+import os
+from pyspark.sql import SparkSession
+
+# Set JAVA_HOME if needed, findspark will handle SPARK_HOME
+os.environ['JAVA_HOME'] = '/opt/homebrew/opt/openjdk@17'
+
+# Initialize findspark
+findspark.init("/opt/homebrew/Cellar/apache-spark/3.5.3/libexec")
+
+# Create a Spark session
+spark = SparkSession.builder \
+    .master("local[*]") \
+    .getOrCreate()
+
+```
+
 Create Session
 
 ```python
