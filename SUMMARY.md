@@ -64,6 +64,7 @@
 ## 🚟 Backend
 
 * [Fast API CRUD](backend/fast-api-crud.md)
+* [Scalable APIs](backend/scalable-apis.md)
 
 ## 💸 Quant Finance
 
