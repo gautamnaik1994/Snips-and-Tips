@@ -9,7 +9,7 @@ Scalability is key for a FastAPI app to handle increasing traffic and maintain p
 #### 1. **Use an ASGI Server**
 
 * Deploy FastAPI with an ASGI server like **Uvicorn** or **Hypercorn** for production.
-*   Use `--workers` to scale the number of worker processes.
+* Use `--workers` to scale the number of worker processes.
 
     ```bash
     bashCopy codeuvicorn app:app --host 0.0.0.0 --port 8000 --workers 4
@@ -46,7 +46,7 @@ Scalability is key for a FastAPI app to handle increasing traffic and maintain p
 * Cache static data or expensive computations using tools like:
   * **Redis**
   * **FastAPI’s dependency caching**
-*   Example:
+* Example:
 
     ```python
     from fastapi_cache import FastAPICache
@@ -72,7 +72,7 @@ Scalability is key for a FastAPI app to handle increasing traffic and maintain p
 * Optimize payload size with:
   * Compression (e.g., **GZip** middleware).
   * Pagination for large datasets.
-*   Example for async:
+* Example for async:
 
     ```python
     @app.get("/items")
@@ -93,7 +93,7 @@ Scalability is key for a FastAPI app to handle increasing traffic and maintain p
 #### 9. **Use a Task Queue for Background Jobs**
 
 * Offload time-consuming tasks to a task queue like **Celery** or **Dramatiq**, backed by Redis or RabbitMQ.
-*   Example:
+* Example:
 
     ```python
     from celery import Celery
@@ -121,7 +121,7 @@ Scalability is key for a FastAPI app to handle increasing traffic and maintain p
 
 #### 12. **Implement Rate Limiting**
 
-*   Prevent abuse by rate-limiting requests with tools like **fastapi-limiter**:
+* Prevent abuse by rate-limiting requests with tools like **fastapi-limiter**:
 
     ```python
     from fastapi_limiter.depends import RateLimiter
@@ -158,7 +158,7 @@ Certain optimizations can only be implemented at the **code level** and are inde
 #### 2. **Asynchronous Programming**
 
 * Use asynchronous functions (`async/await`) for I/O-bound tasks like database queries or API calls.
-*   Example:
+* Example:
 
     ```python
     @app.get("/data")
@@ -172,7 +172,7 @@ Certain optimizations can only be implemented at the **code level** and are inde
 #### 3. **Dependency Injection**
 
 * Use dependency injection in FastAPI to reuse expensive resources (e.g., database connections, configuration objects).
-*   Example:
+* Example:
 
     ```python
     @app.on_event("startup")
@@ -198,7 +198,7 @@ Certain optimizations can only be implemented at the **code level** and are inde
 #### 5. **Caching Logic**
 
 * Cache results of expensive computations or frequent queries within the code.
-*   Use libraries like **functools.lru\_cache** for in-memory caching.
+* Use libraries like **functools.lru\_cache** for in-memory caching.
 
     ```python
     from functools import lru_cache
@@ -213,7 +213,7 @@ Certain optimizations can only be implemented at the **code level** and are inde
 #### 6. **Pagination**
 
 * Implement pagination for APIs to avoid sending large datasets in a single response.
-*   Example:
+* Example:
 
     ```python
     @app.get("/items")
@@ -226,7 +226,7 @@ Certain optimizations can only be implemented at the **code level** and are inde
 #### 7. **Input Validation and Error Handling**
 
 * Validate inputs at the endpoint level to prevent unnecessary processing.
-*   Use Pydantic models for validation in FastAPI.
+* Use Pydantic models for validation in FastAPI.
 
     ```python
     from pydantic import BaseModel
@@ -244,22 +244,23 @@ Certain optimizations can only be implemented at the **code level** and are inde
 
 #### 8. **Optimize Serialization**
 
-*   Use optimized libraries like **orjson** for JSON serialization instead of the default Python library.
+* Use optimized libraries like **orjson** for JSON serialization instead of the default Python library.
 
-    <pre class="language-python"><code class="lang-python"><strong>import orjson
-    </strong>from fastapi.responses import ORJSONResponse
+```python
+    import orjson
+    from fastapi.responses import ORJSONResponse
 
     @app.get("/data", response_class=ORJSONResponse)
     async def get_data():
         return {"key": "value"}
-    </code></pre>
+```
 
 ***
 
 #### 9. **Memory Management**
 
 * Use **generators** to process large data streams instead of storing everything in memory.
-*   Example:
+* Example:
 
     ```python
     def generate_large_data():
@@ -287,7 +288,7 @@ Certain optimizations can only be implemented at the **code level** and are inde
 #### 12. **Implement Rate Limiting or Throttling**
 
 * Add custom logic for rate limiting or throttling within your code to control user abuse.
-*   Example:
+* Example:
 
     ```python
     from collections import defaultdict
@@ -324,7 +325,7 @@ Certain optimizations can only be implemented at the **code level** and are inde
 #### 15. **Use Proper Exception Handling**
 
 * Catch exceptions at appropriate levels to prevent crashes.
-*   Customize exception handling for better user feedback and debugging.
+* Customize exception handling for better user feedback and debugging.
 
     ```python
     pythonCopy codefrom fastapi import HTTPException
