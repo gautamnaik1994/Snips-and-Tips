@@ -4,6 +4,7 @@
 
 ## 📊 Data Science
 
+* [Hierarchical Time Series Forecasting](data-science/hierarchical-time-series-forecasting.md)
 * [Backpropagation in Deep Learning](data-science/backpropagation-in-deep-learning.md)
 * [Debugging ML Models](data-science/debugging-ml-models.md)
 * [Polars Dataframe Library](data-science/polars-dataframe-library.md)
@@ -78,3 +79,4 @@
 ## 🛠️ Architecture
 
 * [Docker](architecture/docker.md)
+* [AWS CDK](architecture/aws-cdk.md)
