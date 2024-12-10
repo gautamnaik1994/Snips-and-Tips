@@ -2,10 +2,10 @@
 
 ## Dataviz library
 
-* Pandas-Profiling
-* Sweetviz
-* Autoviz
-* D-Tale
+- Pandas-Profiling
+- Sweetviz
+- Autoviz
+- D-Tale
 
 ## Subplot syntax
 
@@ -55,13 +55,13 @@ sns.countplot(x="Product_Category", data=df,
 
 ## Plot a Gantt Chart using Plotly
 
-|      | symbol     | buy\_date  | sell\_date | buy\_price  | sell\_price | quantity | days\_diff | profit |
-| ---- | ---------- | ---------- | ---------- | ----------- | ----------- | -------- | ---------- | ------ |
-| 1510 | PERSISTENT | 2023-04-25 | 2023-06-09 | 4448.000000 | 4860.000000 | 2.0      | 7 days     | 824.0  |
-| 367  | BEL        | 2020-05-28 | 2020-07-29 | 21.390625   | 29.890625   | 467.0    | 16 days    | 3969.5 |
-| 1593 | POONAWALLA | 2022-06-10 | 2022-06-13 | 247.750000  | 230.625000  | 40.0     | 29 days    | -685.0 |
-| 493  | CIPLA      | 2021-11-24 | 2021-11-25 | 882.000000  | 888.500000  | 11.0     | 2 days     | 71.5   |
-| 65   | ADANIENT   | 2022-05-31 | 2022-06-01 | 2166.000000 | 2148.000000 | 4.0      | 5 days     | -72.0  |
+|      | symbol     | buy_date   | sell_date  | buy_price   | sell_price  | quantity | days_diff | profit |
+| ---- | ---------- | ---------- | ---------- | ----------- | ----------- | -------- | --------- | ------ |
+| 1510 | PERSISTENT | 2023-04-25 | 2023-06-09 | 4448.000000 | 4860.000000 | 2.0      | 7 days    | 824.0  |
+| 367  | BEL        | 2020-05-28 | 2020-07-29 | 21.390625   | 29.890625   | 467.0    | 16 days   | 3969.5 |
+| 1593 | POONAWALLA | 2022-06-10 | 2022-06-13 | 247.750000  | 230.625000  | 40.0     | 29 days   | -685.0 |
+| 493  | CIPLA      | 2021-11-24 | 2021-11-25 | 882.000000  | 888.500000  | 11.0     | 2 days    | 71.5   |
+| 65   | ADANIENT   | 2022-05-31 | 2022-06-01 | 2166.000000 | 2148.000000 | 4.0      | 5 days    | -72.0  |
 
 ```python
 import plotly.express as px
@@ -71,7 +71,7 @@ fig.update_layout(xaxis_rangeslider_visible=True)
 fig.show()
 ```
 
-### Plot Line equation using matplotlib
+## Plot Line equation using matplotlib
 
 ```python
 import numpy as np
@@ -91,7 +91,7 @@ plt.legend()
 plt.show()
 ```
 
-Crosstab Plotly subplot
+## Crosstab Plotly subplot
 
 ```python
 fig = make_subplots(rows=1, cols=2, subplot_titles=("Term vs Loan Status", "Grade vs Loan Status"))
@@ -128,7 +128,7 @@ fig.update_layout(
 fig.show();
 ```
 
-### Polar Plot
+## Polar Plot
 
 ```python
 import numpy as np
@@ -189,8 +189,55 @@ features =cluster_means.columns.to_list()
 ##Single polar plot
 for cluster in range(cluster_means.shape[0]):
     create_polar_plot(normalized_means[cluster], features, cluster)
-    
+
 ##Combine Polar Plot```python
 cluster_labels = df["y_kmeans"].unique().to_list()
 create_combined_polar_plot(normalized_means, features, cluster_labels)
 ````
+
+## Seasonal Decomposition using Plotly
+
+```python
+
+from plotly.subplots import make_subplots
+from statsmodels.tsa.seasonal import DecomposeResult, seasonal_decompose
+
+def plot_seasonal_decompose(result:DecomposeResult, dates:pd.Series=None, title:str="Seasonal Decomposition"):
+    x_values = dates if dates is not None else np.arange(len(result.observed))
+    return (
+        make_subplots(
+            rows=4,
+            cols=1,
+            subplot_titles=["Observed", "Trend", "Seasonal", "Residuals"],
+        )
+        .add_trace(
+            go.Scatter(x=x_values, y=result.observed, mode="lines", name='Observed'),
+            row=1,
+            col=1,
+        )
+        .add_trace(
+            go.Scatter(x=x_values, y=result.trend, mode="lines", name='Trend'),
+            row=2,
+            col=1,
+        )
+        .add_trace(
+            go.Scatter(x=x_values, y=result.seasonal, mode="lines", name='Seasonal'),
+            row=3,
+            col=1,
+        )
+        .add_trace(
+            go.Scatter(x=x_values, y=result.resid, mode="lines", name='Residual'),
+            row=4,
+            col=1,
+        )
+        .update_layout(
+            height=900, title=f'<b>{title}</b>', margin={'t':100}, title_x=0.5, showlegend=False
+        )
+    )
+
+
+decomposition = seasonal_decompose(data['#Passengers'], model='additive', period=12)
+fig = plot_seasonal_decompose(decomposition, dates=data['Month'])
+fig.show()
+
+```

@@ -28,3 +28,11 @@ Use JupySQL plugin
 [https://github.com/ploomber/jupysql](https://github.com/ploomber/jupysql)
 
 {% embed url="https://jupysql.ploomber.io/en/latest/quick-start.html" %}
+
+### Print Markdown in Jupyter Notebook
+
+```python
+from IPython.display import Markdown, display
+
+display(Markdown('**bold**'))
+```
