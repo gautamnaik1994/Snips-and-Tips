@@ -46,6 +46,7 @@
 * [Array Methods](web-dev/array-methods.md)
 * [Throttle Debounce](web-dev/throttle-debounce-react.md)
 * [Media Queries](web-dev/media-queries.md)
+* [React Typeahead Search](web-dev/react-typeahead-search.md)
 
 ## 💻 Product Analytics
 
