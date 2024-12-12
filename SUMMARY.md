@@ -4,7 +4,9 @@
 
 ## 📊 Data Science
 
-* [Hierarchical Time Series Forecasting](data-science/hierarchical-time-series-forecasting.md)
+* [Time Series Forecasting](data-science/time-series-forecasting/README.md)
+  * [Hierarchical Time Series Forecasting](data-science/time-series-forecasting/hierarchical-time-series-forecasting.md)
+  * [Facebook Prophet](data-science/time-series-forecasting/facebook-prophet.md)
 * [Backpropagation in Deep Learning](data-science/backpropagation-in-deep-learning.md)
 * [Debugging ML Models](data-science/debugging-ml-models.md)
 * [Polars Dataframe Library](data-science/polars-dataframe-library.md)

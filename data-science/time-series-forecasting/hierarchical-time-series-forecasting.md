@@ -1,6 +1,6 @@
 # Hierarchical Time Series Forecasting
 
-#### Key Concepts:
+### Key Concepts:
 
 1. **Top-down Approach:**
    * Start by forecasting at the highest level (e.g., total sales for a company).
