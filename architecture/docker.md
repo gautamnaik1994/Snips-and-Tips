@@ -8,7 +8,7 @@ Command to inspect the content of an image created
 docker run -it --name temp_container imageName /bin/sh
 ```
 
-where "temp_container" is the name of temporary container
+where "temp\_container" is the name of temporary container
 
 ```bash
 docker images
@@ -27,3 +27,9 @@ docker run --rm -p 8000:8000 name_of_image
 ```
 
 Add `--rm` to remove the container after it stops
+
+Command to get ip address of contaier
+
+```sh
+docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' postgres-local
+```
