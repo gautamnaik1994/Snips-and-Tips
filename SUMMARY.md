@@ -14,6 +14,7 @@
 * [Loading large data](data-science/loading-large-data.md)
 * [Handling Imbalanced Dataset](data-science/handling-imbalanced-dataset.md)
 * [Feature Engineering](data-science/feature-engineering/README.md)
+  * [Time Series](data-science/feature-engineering/time-series.md)
   * [Outlier Detection](data-science/feature-engineering/outlier-detection.md)
   * [Categorical Encoding](data-science/feature-engineering/categorical-encoding.md)
   * [Feature Scaling](data-science/feature-engineering/feature-scaling.md)
@@ -34,6 +35,10 @@
 * [SQL](data-science/sql/README.md)
   * [SQL Tips](data-science/sql/sql-tips.md)
   * [Creating new columns](data-science/sql/creating-new-columns.md)
+
+## 🔖 Machine Learning
+
+* [Page 1](machine-learning/page-1.md)
 
 ## 🐲 DSA
 
