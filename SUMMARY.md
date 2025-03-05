@@ -89,3 +89,7 @@
 
 * [Docker](architecture/docker.md)
 * [AWS CDK](architecture/aws-cdk.md)
+
+## ☘️ Deep Learning
+
+* [Optimizers](deep-learning/optimizers.md)
