@@ -18,6 +18,17 @@ res.collect()
 
 ### Polars basic
 
-[https://github.com/gautamnaik1994/2023-Pycon-Polars](https://github.com/gautamnaik1994/2023-Pycon-Polars)
+{% embed url="https://github.com/gautamnaik1994/2023-Pycon-Polars" %}
 
 {% @github-files/github-code-block url="<https://github.com/gautamnaik1994/2023-Pycon-Polars>" %}
+
+
+
+#### Timedelta equivalent for Polars
+
+```python
+df=df.with_columns(
+    pl.col("created_at").dt.offset_by('-5h30m'),
+    pl.col("actual_delivery_time").dt.offset_by('-5h30m')
+)
+```
