@@ -25,6 +25,7 @@
 ## ☘️ Deep Learning
 
 * [Backpropagation in Deep Learning](deep-learning/backpropagation-in-deep-learning.md)
+* [Pytorch Early Stopping](deep-learning/pytorch-early-stopping.md)
 * [Optimizers](deep-learning/optimizers.md)
 
 ## 🔖 Machine Learning
