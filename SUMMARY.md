@@ -28,6 +28,10 @@
 * [Pytorch Early Stopping](deep-learning/pytorch-early-stopping.md)
 * [Optimizers](deep-learning/optimizers.md)
 
+***
+
+* [Pytorch Tensor Shapes](pytorch-tensor-shapes.md)
+
 ## 🔖 Machine Learning
 
 * [Handling Imbalanced Dataset](machine-learning/handling-imbalanced-dataset.md)
