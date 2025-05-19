@@ -64,6 +64,10 @@
 * [Media Queries](web-dev/media-queries.md)
 * [React Typeahead Search](web-dev/react-typeahead-search.md)
 
+***
+
+* [Replace text with React Component](replace-text-with-react-component.md)
+
 ## 💻 Product Analytics
 
 * [Product Sense](product-analytics/product-sense.md)
