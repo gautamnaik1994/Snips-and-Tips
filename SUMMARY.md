@@ -105,3 +105,4 @@
 ## 🦠 Artificial Intelligence
 
 * [AI Engg](artificial-intelligence/ai-engg.md)
+* [LLM streaming FASTAPI](artificial-intelligence/llm-streaming-fastapi.md)
