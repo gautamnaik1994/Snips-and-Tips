@@ -50,6 +50,7 @@
 
 ## 🐲 DSA
 
+* [Numbers](dsa/numbers.md)
 * [Arrays](dsa/arrays.md)
 
 ## 🖥️ WEB DEV
