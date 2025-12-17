@@ -76,6 +76,7 @@
 
 ## 🖥️ Terminal
 
+* [Zip All Files](terminal/zip-all-files.md)
 * [Terminal Commands](terminal/terminal-commands.md)
 * [Jupyter Notebook 2 HTML](terminal/jupyter-notebook-2-html.md)
 
