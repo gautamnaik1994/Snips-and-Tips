@@ -1,19 +1,19 @@
 ---
 description: >-
   Check whether RSI or anything similar has predictive power by building zero
-  investment porfolio
+  investment portfolio
 ---
 
 # Factor Validation
 
-In quantitative finance, testing whether an technical indicator like RSI (Relative Strength Index) carries predictive power is done by constructing a Zero-Investment (Long-Short) Portfolio or calculating the Information Coefficient (IC) between the factor value at time $$ $t$ $$ and future stock returns at time $$ $t+1$ $$.
+In quantitative finance, testing whether an technical indicator like RSI (Relative Strength Index) carries predictive power is done by constructing a Zero-Investment (Long-Short) Portfolio or calculating the Information Coefficient (IC) between the factor value at time t and future stock returns at time t+1.
 
 Here is how the quantitative methodology works in practice:
 
 1. Rank & Segment: At the end of each period (e.g., monthly/daily), calculate the 14-day RSI for all stocks in the universe (Nifty 50).
 2. Form Portfolios: \* Mean-Reversion Thesis: Go Long oversold stocks (lowest RSI) and Short overbought stocks (highest RSI).
    * Momentum Thesis: Go Long high-RSI stocks and Short low-RSI stocks.
-3. Measure Performance: The return of the Long-Short portfolio is the Factor Premium. If the average premium over time is significantly positive (t-statistic $$ $> 2.0$ $$), the factor has predictive power.
+3. Measure Performance: The return of the Long-Short portfolio is the Factor Premium. If the average premium over time is significantly positive (t-statistic > 2.0), the factor has predictive power.
 
 #### Python Code Implementation (Pandas + `yfinance`)
 
@@ -190,12 +190,19 @@ else:
 
 #### Key Takeaways from this Validation Test
 
-1. t-Statistic Rule of Thumb: \* A $$ $t$ $$-statistic $$ $> \vert{}2.0\vert{}$ $$ indicates that the RSI factor premium is statistically different from zero (not random luck).
-2.  Information Coefficient (IC): \* You can also measure predictive power using Spearman rank correlation between RSI at $$ $t$ $$ and returns at $$ $t+1$ $$:
+1. t-Statistic Rule of Thumb: \* A t-statistic > |2.0| indicates that the RSI factor premium is statistically different from zero (not random luck).
+2. Information Coefficient (IC): \* You can also measure predictive power using Spearman rank correlation between RSI at t and returns at t+1:
 
-    \$$\text{IC}\_t = \text{Corr}\big(\text{Rank}(\text{RSI}\_t), \text{Rank}(\text{Return}\_{t+1})\big)\$$
+   $$\text{IC}_t = \text{Corr}\big(\text{Rank}(\text{RSI}_t), \text{Rank}(\text{Return}_{t+1})\big)$$
 
-    * An average $$ $\text{IC} > 0.05$ $$ is considered a good predictive factor in quantitative equity management.
+   IC at time t is the correlation between:
+
+    the rank of RSI at time t, and
+    the rank of next period’s return (time t+1).
+    In simple words: it checks whether stocks with higher RSI today tend to have higher (or lower) returns in the next period.
+
+    * An average IC > 0.05 is considered a good predictive factor in quantitative equity management.
 3. Common Pitfalls to Avoid:
-   * Look-ahead Bias: Always ensure factor inputs (RSI at month-end) use price data up to month-end, and returns are evaluated for the _subsequent_ period ($$ $t+1$ $$).
-   * Transaction Costs & Slippage: A zero-investment portfolio requires rebalancing, which incurs brokerage costs and impact cost, especially in shorting.
+
+* Look-ahead Bias: Always ensure factor inputs (RSI at month-end) use price data up to month-end, and returns are evaluated for the _subsequent_ period (t+1).
+* Transaction Costs & Slippage: A zero-investment portfolio requires rebalancing, which incurs brokerage costs and impact cost, especially in shorting.
