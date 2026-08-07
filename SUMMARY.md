@@ -95,6 +95,7 @@
 * [Factor Investing](quant-finance/factor-investing.md)
 * [Misc](quant-finance/misc.md)
 * [Factor Validation](quant-finance/factor-validation.md)
+* [Fundamental Factors](quant-finance/fundamental-factors.md)
 
 ## 🎮 Game Dev
 
