@@ -48,6 +48,11 @@
   * [Categorical Encoding](machine-learning/feature-engineering/categorical-encoding.md)
   * [Feature Scaling](machine-learning/feature-engineering/feature-scaling.md)
 
+## AWS
+
+* [Kinesis](aws/kinesis.md)
+* [Glue and Athena](aws/glue-and-athena.md)
+
 ## 🐲 DSA
 
 * [Numbers](dsa/numbers.md)
