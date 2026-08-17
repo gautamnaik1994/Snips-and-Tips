@@ -1,8 +1,8 @@
-# Statistical Tests
+# Statistical tests
 
-A telecom company had taken a **survey** of smartphone owners in a certain town 5 years back and found **73%** of the population own a **smartphone**, and have been since using this data to make their business decisions.
+A telecom company conducted a **survey** of smartphone owners in a certain town five years ago. It found that **73%** of the population owns a **smartphone**. It has used this data to make business decisions.
 
-Now a new marketing manager has joined, and he believes this value is not valid anymore. Thus he conducts a survey of **500 people** and finds that **420** of them responded with affirmation as to owning a smartphone. Which **statistical test** would you use to **compare** these two survey data?
+A marketing manager believes this value is no longer valid. They conduct a survey of **500 people** and find that **420** own a smartphone. Which **statistical test** compares these two surveys?
 
 1. **Test of proportions, z-test:**
    * Applicability: This is the correct option. The z-test for proportions is suitable when comparing the proportions of two independent samples. In this case, you are comparing the proportion of smartphone owners in the town based on the data from 5 years ago (73%) and the recent survey (where 420 out of 500 respondents own a smartphone).
@@ -14,32 +14,32 @@ Now a new marketing manager has joined, and he believes this value is not valid 
    * Applicability: The t-test is used when comparing means of two independent samples, not proportions.
    * Reasoning: Since you are interested in comparing the proportion of smartphone owners, the t-test is not the appropriate choice. The t-test is used for continuous data (such as comparing the means of two groups) and is not suitable for proportions.
 
-## Kolmogorov–Smirnov Test (KS Test)
+## Kolmogorov–Smirnov test (KS test)
 
-This test checks if two sets of data have the same type of distribution
+This test checks whether two datasets have the same distribution.
 
-## Kruskal Wallis Test
+## Kruskal–Wallis test
 
-This test does not assume that the data are normal, it does assume that the different groups have the same distribution, and groups with different standard deviations have different distributions
+This test does not assume normal data. It assumes that groups have the same distribution. Groups with different standard deviations have different distributions.
 
 ## ANOVA
 
-## Levene
+## Levene test
 
-This test checks if data arrays passed to it has equal variance
+This test checks whether data arrays have equal variance.
 
-## Shapiro-Wilk Test
+## Shapiro–Wilk test
 
-This test checks whether data has normal distribution
+This test checks whether data has a normal distribution.
 
-## CHI Square
+## Chi-square test
 
-This is used to check if 2 categorical variable are related
+Use this test to check whether two categorical variables are related.
 
-* Null Hypothesis : 2 groups are independent
-* Alternate Hypothesis: 2 groups are dependent
+* Null hypothesis: Two groups are independent.
+* Alternative hypothesis: Two groups are dependent.
 
-This means that the expected value table received from following calculations have independent values
+The following calculation produces an expected-value table with independent values:
 
 ```python
 
@@ -58,7 +58,7 @@ else:
 # p-value < alpha, then reject the null hypothesis
 ```
 
-## Different combinations and corresponding test
+## Test selection by variable combination
 
 | Scenario                                           | Statistical Test             | Example                                                                                                         |
 | -------------------------------------------------- | ---------------------------- | --------------------------------------------------------------------------------------------------------------- |
@@ -72,20 +72,22 @@ else:
 | Categorical vs. Categorical (Association)          | Cramér's V                   | Measuring the strength of association between political affiliation and voting behavior.                        |
 | Numerical vs. Categorical (Ordinal)                | Kruskal-Wallis Test          | Comparing the median satisfaction scores for customers across different levels of service quality.              |
 
-1 sample z test for mean\
-1 sample t test for mean
+One-sample z-test for a mean\
+One-sample t-test for a mean
 
-1 sample z test for proportion 1 sample t test for proportion
+One-sample z-test for a proportion\
+One-sample t-test for a proportion
 
-2 sample independent test for mean 2 sample independent test for proportion
+Two-sample independent test for a mean\
+Two-sample independent test for a proportion
 
 Paired test
 
-### Cheat sheet for different test
+### Cheat sheet for different tests
 
 {% embed url="https://machinelearningmastery.com/statistical-hypothesis-tests-in-python-cheat-sheet/" %}
 
-### Hopkins test to check clustering tendency
+### Hopkins test for clustering tendency
 
 ```python
 import numpy as np
@@ -140,4 +142,4 @@ def hopkins_statistic(X: pd.DataFrame, sample_size: float = 0.1) -> float:
     return hopkins_stat
 ```
 
-If output is close to 1, that means data does not have clusters. If 0 then data has clusters
+If the output is close to `1`, the data has no clusters. If it is `0`, the data has clusters.

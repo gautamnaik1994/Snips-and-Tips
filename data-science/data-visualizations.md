@@ -1,15 +1,15 @@
-# Data Visualizations
+# Data visualizations
 
-## Dataviz library
+## Data visualization libraries
 
-- Pandas-Profiling
-- Sweetviz
-- Autoviz
-- D-Tale
+* Pandas-Profiling
+* Sweetviz
+* Autoviz
+* D-Tale
 
 ## Subplot syntax
 
-### To plot 3 x 2 plots
+### Plot three by two plots
 
 ```python
 variables = ["Age", "Education", "Usage", "Fitness", "Income", "Miles"]
@@ -25,13 +25,13 @@ for i in range(2):
 plt.show();
 ```
 
-### Subplots using single line
+### Use a single line for subplots
 
 ```python
 data.plot(kind='density', subplots=True, layout=(3, 3), sharex=False)
 ```
 
-To generate box plot with solid background color
+Generate a box plot with a solid background color:
 
 ```python
 colors = dict(boxes='lightblue', whiskers='dimgrey', medians='dimgrey', caps='dimgrey')
@@ -39,29 +39,29 @@ df.plot(kind='box', subplots=True, layout=(3, 4), sharex=False, figsize=(12, 15)
 plt.suptitle("Outliers", y=0.92, fontsize=14);
 ```
 
-### Add a Pie chart inside the subplot
+### Add a pie chart to a subplot
 
 ```python
 unique_users["Gender"].value_counts(normalize=True )[:10].plot(kind="pie", autopct='%1.1f%%', startangle=90, ax=axes[1,0])
 axes[1,0].set_title("Gender Distribution");
 ```
 
-### Load top n values in seaborn countplot
+### Load the top `n` values in a Seaborn count plot
 
 ```python
 sns.countplot(x="Product_Category", data=df,
     order=df["Product_Category"].value_counts().iloc[:10].index)
 ```
 
-## Plot a Gantt Chart using Plotly
+## Plot a Gantt chart with Plotly
 
-|      | symbol     | buy_date   | sell_date  | buy_price   | sell_price  | quantity | days_diff | profit |
-| ---- | ---------- | ---------- | ---------- | ----------- | ----------- | -------- | --------- | ------ |
-| 1510 | PERSISTENT | 2023-04-25 | 2023-06-09 | 4448.000000 | 4860.000000 | 2.0      | 7 days    | 824.0  |
-| 367  | BEL        | 2020-05-28 | 2020-07-29 | 21.390625   | 29.890625   | 467.0    | 16 days   | 3969.5 |
-| 1593 | POONAWALLA | 2022-06-10 | 2022-06-13 | 247.750000  | 230.625000  | 40.0     | 29 days   | -685.0 |
-| 493  | CIPLA      | 2021-11-24 | 2021-11-25 | 882.000000  | 888.500000  | 11.0     | 2 days    | 71.5   |
-| 65   | ADANIENT   | 2022-05-31 | 2022-06-01 | 2166.000000 | 2148.000000 | 4.0      | 5 days    | -72.0  |
+|      | symbol     | buy\_date  | sell\_date | buy\_price  | sell\_price | quantity | days\_diff | profit |
+| ---- | ---------- | ---------- | ---------- | ----------- | ----------- | -------- | ---------- | ------ |
+| 1510 | PERSISTENT | 2023-04-25 | 2023-06-09 | 4448.000000 | 4860.000000 | 2.0      | 7 days     | 824.0  |
+| 367  | BEL        | 2020-05-28 | 2020-07-29 | 21.390625   | 29.890625   | 467.0    | 16 days    | 3969.5 |
+| 1593 | POONAWALLA | 2022-06-10 | 2022-06-13 | 247.750000  | 230.625000  | 40.0     | 29 days    | -685.0 |
+| 493  | CIPLA      | 2021-11-24 | 2021-11-25 | 882.000000  | 888.500000  | 11.0     | 2 days     | 71.5   |
+| 65   | ADANIENT   | 2022-05-31 | 2022-06-01 | 2166.000000 | 2148.000000 | 4.0      | 5 days     | -72.0  |
 
 ```python
 import plotly.express as px
@@ -71,7 +71,7 @@ fig.update_layout(xaxis_rangeslider_visible=True)
 fig.show()
 ```
 
-## Plot Line equation using matplotlib
+## Plot a line equation with Matplotlib
 
 ```python
 import numpy as np
@@ -128,7 +128,7 @@ fig.update_layout(
 fig.show();
 ```
 
-## Polar Plot
+## Polar plot
 
 ```python
 import numpy as np
@@ -177,7 +177,7 @@ def create_combined_polar_plot(normalized_means, features, cluster_labels):
     plt.show()
 ```
 
-**Usage**
+**Usage:**
 
 ````python
 cluster_means = df.group_by("y_kmeans").mean().to_pandas().drop(["y_kmeans"], axis=1)
@@ -195,7 +195,7 @@ cluster_labels = df["y_kmeans"].unique().to_list()
 create_combined_polar_plot(normalized_means, features, cluster_labels)
 ````
 
-## Seasonal Decomposition using Plotly
+## Seasonal decomposition with Plotly
 
 ```python
 

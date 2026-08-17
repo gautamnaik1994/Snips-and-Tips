@@ -1,13 +1,13 @@
-# Loading large data
+# Load large data
 
-#### Use datatable library
+#### Use the datatable library
 
 ```python
 import datatable as dt
 dt.fread("file").to_pandas()
 ```
 
-#### Use DuckDB library
+#### Use the DuckDB library
 
 ```python
 duckdb.sql(
@@ -24,15 +24,15 @@ duckdb.sql(
 ).pl().sample(10)
 ```
 
-where df is the dataframe and .pl() converts the dataframe into Polars dataframe
+`df` is the DataFrame, and `.pl()` converts it to a Polars DataFrame.
 
-#### Convert float64 to float32
+#### Convert `float64` to `float32`
 
 ```python
 df = df.astype({c: np.float32 for c in df.select_dtypes(include='float64').columns})
 ```
 
-#### Load pickle file
+#### Load a pickle file
 
 ```python
 import pickle

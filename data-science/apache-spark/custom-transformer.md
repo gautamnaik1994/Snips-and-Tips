@@ -1,6 +1,6 @@
 # Custom Transformer
 
-### **Custom Tranformer**
+### Custom transformer
 
 ```python
 from pyspark.ml import Transformer
@@ -100,7 +100,7 @@ model = pipeline.fit(input_df)
 transformed_df = model.transform(input_df)
 ```
 
-### Class Weight Transformer
+### Class weight transformer
 
 ```python
 from pyspark.ml import Transformer

@@ -1,10 +1,10 @@
-# Pandas Apply Function
+# Pandas apply function
 
-Consider the following data frame
+Consider the following DataFrame:
 
 <table><thead><tr><th width="106">total_bill</th><th>tip</th><th width="88">sex</th><th>smoker</th><th>day</th><th>time</th><th>size</th><th data-hidden></th></tr></thead><tbody><tr><td>16.99</td><td>1.01</td><td>Female</td><td>No</td><td>Sun</td><td>Dinner</td><td>2</td><td>0</td></tr><tr><td>10.34</td><td>1.66</td><td>Male</td><td>No</td><td>Sun</td><td>Dinner</td><td>3</td><td>1</td></tr><tr><td>21.01</td><td>3.50</td><td>Male</td><td>No</td><td>Sun</td><td>Dinner</td><td>3</td><td>2</td></tr><tr><td>23.68</td><td>3.31</td><td>Male</td><td>No</td><td>Sun</td><td>Dinner</td><td>2</td><td>3</td></tr><tr><td>24.59</td><td>3.61</td><td>Female</td><td>No</td><td>Sun</td><td>Dinner</td><td>4</td><td>4</td></tr></tbody></table>
 
-When we run the following code, all values of **each column** will be printed
+The following code prints all values in **each column**:
 
 ```python
 df.apply(lambda x:print(x), axis=0)
@@ -67,7 +67,7 @@ df.apply(lambda x:print(x), axis=0)
 
 ```
 
-When we run the following code, all values of **each row** will be printed
+The following code prints all values in **each row**:
 
 ```python
 df.apply(lambda x:print(x), axis=1)
@@ -93,7 +93,7 @@ Name: 1, dtype: object
 ...
 ```
 
-Following are different ways to use `apply` function to create new columns in a data frame
+Use the `apply` function to create new columns in a DataFrame:
 
 ```python
 def multiply(d):

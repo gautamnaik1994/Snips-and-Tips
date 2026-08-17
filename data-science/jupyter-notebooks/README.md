@@ -1,19 +1,19 @@
-# Jupyter Notebooks
+# Jupyter notebooks
 
-## Some tips about Jupyter Notebooks
+## Tips for Jupyter notebooks
 
 ### Show multiple outputs
 
-By default jupyter notebooks only outputs once per cell. If you want to display multiple outputs use the following code snippet\`\`\`python
+By default, Jupyter notebooks display one output per cell. To display multiple outputs, use:
 
 ```python
 from IPython.core.interactiveshell import InteractiveShell
 InteractiveShell.ast_node_interactivity = "all"
 ```
 
-If you want to print multiple varibles in one line then just put the names of varibles with comma in between
+To print multiple variables on one line, separate their names with commas.
 
-### Alert Boxes
+### Alert boxes
 
 ```markdown
 <div class="alert alert-danger">
@@ -23,13 +23,13 @@ If you want to print multiple varibles in one line then just put the names of va
 
 ### Run SQL queries
 
-Use JupySQL plugin
+Use the JupySQL plugin:
 
-[https://github.com/ploomber/jupysql](https://github.com/ploomber/jupysql)
+[JupySQL GitHub repository](https://github.com/ploomber/jupysql)
 
 {% embed url="https://jupysql.ploomber.io/en/latest/quick-start.html" %}
 
-### Print Markdown in Jupyter Notebook
+### Print Markdown in a Jupyter notebook
 
 ```python
 from IPython.display import Markdown, display

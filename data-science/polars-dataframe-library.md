@@ -1,8 +1,8 @@
-# Polars Dataframe Library
+# Polars DataFrame library
 
-## Some useful tips about polars dataframe library
+## Useful tips for the Polars DataFrame library
 
-### Using SQL queries inside polars
+### Use SQL queries in Polars
 
 ```python
 res = pl.SQLContext(frame=df).execute(
@@ -16,15 +16,13 @@ select * from cte order by primary_term desc limit 10
 res.collect()
 ```
 
-### Polars basic
+### Polars basics
 
 {% embed url="https://github.com/gautamnaik1994/2023-Pycon-Polars" %}
 
 {% @github-files/github-code-block url="<https://github.com/gautamnaik1994/2023-Pycon-Polars>" %}
 
-
-
-#### Timedelta equivalent for Polars
+#### Timedelta equivalent in Polars
 
 ```python
 df=df.with_columns(

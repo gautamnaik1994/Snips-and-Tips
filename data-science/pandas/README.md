@@ -2,31 +2,31 @@
 
 #### Plotting
 
-To plot histogram from dataframe
+Plot a histogram from a DataFrame:
 
 ```python
 df[anything].hist(bins =50)
 ```
 
-If you the plot to be separated by categorical variables. for eg `final_close_flag` has values 0 and 1
+To separate a plot by categorical variables, use `final_close_flag`, which has values `0` and `1`:
 
 ```
 df.hist(column="record_number", by="final_close_flag", bins=20)
 ```
 
-Box plot
+Box plot:
 
 ```python
 df.boxplot(column='name')
 ```
 
-Segregation by features
+Separate by feature:
 
 ```python
 df.boxplot(column='name', by='feature')
 ```
 
-To use plotly as backend to plot directly from pandas dataframe
+Use Plotly as the backend to plot directly from a pandas DataFrame:
 
 ```python
 import pandas as pd
@@ -36,7 +36,7 @@ pd.options.plotting.backend = 'plotly'
 df["Close"].plot()
 ```
 
-#### To plot candlestick chart using plotly
+#### Plot a candlestick chart with Plotly
 
 ```python
 fig = go.Figure(data=[go.Candlestick(x=df.index, open=df["Open"],
@@ -50,24 +50,24 @@ fig.show()
 
 #### Tips
 
-List missing values of each column
+List missing values in each column:
 
 ```python
 df.apply(lambda x :sum(x.isnull()), axis=0)
 df.isnull().sum
 ```
 
-Boolean Indexing in Pandas
+Boolean indexing in pandas:
 
 ```python
 data.loc[(data["Gender"]=="Female") & (data["Education"]=="Not Graduate") & (data["Loan_Status"]=="Y"), ["Gender","Education","Loan_Status"]]
 ```
 
-#### Cut function for binning
+#### Use the `cut` function for binning
 
 Sometimes numerical values make more sense if clustered together. For example, if we’re trying to model traffic (#cars on road) with time of the day (minutes). The exact minute of an hour might not be that relevant for predicting traffic as compared to actual period of the day like “Morning”, “Afternoon”, “Evening”, “Night”, “Late Night”. Modeling traffic this way will be more intuitive and will avoid overfitting.
 
-Here we define a simple function which can be re-used for binning any variable fairly easily.
+This function bins any variable.
 
 ```python
 #Binning:
@@ -95,7 +95,7 @@ print (pd.value_counts(data["LoanAmount_Bin"], sort=False))
 
 ```
 
-#### Coding nominal data using Pandas
+#### Code nominal data with pandas
 
 Often, we find a case where we’ve to modify the categories of a nominal variable. This can be due to various reasons:
 
@@ -127,7 +127,7 @@ def show_missing_count(data):
     return missing
 ```
 
-#### Check if there are empty rows or columns and find them
+#### Find empty rows or columns
 
 ```python
 import pandas as pd
@@ -141,14 +141,14 @@ df = pd.DataFrame({
 df[df.isnull().any(axis=1)]
 ```
 
-Output
+The output is:
 
 | index | Accessories | customer | quantity |
 | ----- | ----------- | -------- | -------- |
 | 3     |             | Andrew   | 3        |
 | 5     | Laptop      |          | 2        |
 
-Here `.any()` select a row if one of the columns is 'NA' . Internally a numpy mask `df.isnull().any(axis=1)` is created which outputs following
+Here, `.any()` selects a row when a column contains `NA`. The NumPy mask `df.isnull().any(axis=1)` produces:
 
 ```
 0    False
@@ -160,7 +160,7 @@ Here `.any()` select a row if one of the columns is 'NA' . Internally a numpy ma
 dtype: bool
 ```
 
-#### List all individual values from categorical columns and their count
+#### List values in categorical columns and their counts
 
 ```python
 df[categorical_columns].melt().groupby(['variable', 'value'])[['value']].count()
@@ -168,17 +168,17 @@ df[categorical_columns].melt().groupby(['variable', 'value'])[['value']].count()
 
 #### Bubble plot
 
-Dataframe
+The DataFrame is:
 
 | Country   | Year | Exports            |
-|-----------|------|--------------------|
+| --------- | ---- | ------------------ |
 | Country O | 2008 | 28.688524590163933 |
 | Country O | 2004 | 25.68807339449541  |
 | Country O | 1996 | 5.405405405405405  |
 | Country O | 2002 | 17.094017094017094 |
 | Country O | 1992 | 18.72791519434629  |
 
-**Plotly Version**
+**Plotly version**
 
 ```python
 import pandas as pd
@@ -204,7 +204,7 @@ fig.update_layout(showlegend=False)
 fig.show()
 ```
 
-**SeaBorn Version**
+**Seaborn version**
 
 ```python
 plt.figure(figsize=(15, 5))

@@ -1,8 +1,8 @@
 # Apache Spark
 
-## Common Snippets
+## Common snippets
 
-Initialize Spark Session&#x20;
+Initialize a Spark session:
 
 ```python
 import os
@@ -25,7 +25,7 @@ spark = SparkSession.builder\
 
 ```
 
-Using findspark
+Use `findspark`:
 
 ```python
 import findspark
@@ -45,7 +45,7 @@ spark = SparkSession.builder \
 
 ```
 
-Create Session
+Create a session:
 
 ```python
 from pyspark.sql import SparkSession
@@ -60,7 +60,7 @@ spark = SparkSession.builder \
     .getOrCreate()
 ```
 
-Read CSV
+Read a CSV file:
 
 ```python
 df = spark.read \
@@ -71,7 +71,7 @@ df = spark.read \
     .csv("./test.csv")
 ```
 
-Drop null values
+Drop null values:
 
 ```python
 df.na.drop(how="all") #if all columns have null values
@@ -79,7 +79,7 @@ df.na.drop(how="any") #if any one columns have null value
 df.na.drop(how="any", thresh=2) #if atleast there are 2 null values
 ```
 
-Target Encoding
+Target encoding:
 
 ```python
 # spark inputs
@@ -159,7 +159,7 @@ df_target_encoded.show()
 +-----+-----+
 ```
 
-Window Functions and Coalesce
+Window functions and `coalesce`:
 
 ```python
 window_spec = Window.partitionBy("Driver_ID")
@@ -170,7 +170,7 @@ df = df.withColumn(
 )
 ```
 
-Conditional column values
+Conditional column values:
 
 ```python
 default_date = "2020-12-31"
