@@ -47,6 +47,7 @@
   * [Outlier Detection](machine-learning/feature-engineering/outlier-detection.md)
   * [Categorical Encoding](machine-learning/feature-engineering/categorical-encoding.md)
   * [Feature Scaling](machine-learning/feature-engineering/feature-scaling.md)
+* [Training Biases](machine-learning/training-biases.md)
 
 ## AWS
 
